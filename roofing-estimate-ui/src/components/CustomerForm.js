@@ -1,9 +1,11 @@
 // Import React and useState hook from the React Library
 import axios from 'axios';
 import React, {useState} from 'react';
+import {useNavigate}  from "react-router-dom";
 
 function CustomerForm(){
 
+    const navigate = useNavigate();
     const [formData, setFormData] = useState({
         name: '',
         phoneNumber: '',
@@ -19,12 +21,18 @@ function CustomerForm(){
         });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault(); // prevents form from refreshing the page
-        
-        const totalEstimate = formData.roofSizeInSquares * formData.pricePerSquares;
-        console.log('Form Data', {...formData, totalEstimate});
-        // TODO: Send this to backend using Axios?
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try {
+            const response = await axios.post('http://localhost:8080/customers', formData);
+            console.log('Customer created:', response.data);
+
+            //Redirect to the customer list
+            navigate('/customers');
+        } catch (error) {
+            console.error('Error creating customer:', error);
+        }
     };
     return (
         <form onSubmit={handleSubmit}>
