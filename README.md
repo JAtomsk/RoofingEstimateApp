@@ -10,31 +10,20 @@ This project is currently in active development. It's part of my self-guided lea
 
 ---
 
-## ✔️ What’s Working Now
-
-- Spring Boot backend initialized with Maven
-- Local MySQL database integration (tested and running)
-- Customer entity with validation and database persistence
-- REST API endpoints for creating and retrieving customers
-- Tested endpoints using Postman
-- Input validation using Jakarta annotations
-
 ---
 
 ## 🚧 In Progress
-
-- Estimate logic: calculating total = `roofSize * pricePerSquare`
-- Building out Estimate entity and relationships
-- Adding service layers and separating business logic
-- Improving request/response formatting and documentation
+[Check out my dev log](./development.md) to follow my learning process and the current state of this project!
 
 ---
 
-## 🧠 What I'm Learning
+## 🧠 What I'm Using Currently!
 
 - Java backend development from the ground up
 - Object-Oriented Programming (OOP) and MVC architecture
 - Spring Boot fundamentals, including JPA and validation
+- React for front end Development
+- Node.js
 - Working with relational databases using MySQL and AWS RDS
 - Testing APIs with Postman and troubleshooting connection issues
 
@@ -46,4 +35,3 @@ This app combines two sides of my background: roofing and software. By building 
 
 ---
 
-> This README will be updated as the project evolves. Feel free to follow the repo to watch the progress.
